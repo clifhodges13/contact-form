@@ -1,5 +1,6 @@
 .Footer {
   text-align: center;
+  
 }
 
 .App-footer {
@@ -16,6 +17,9 @@
 
 .Footer-link {
   color: #f1f1f1;
+  background: transparent;
+  padding: 0;
+  border: none;
   text-decoration: none;
   list-style: none;
   text-transform: uppercase;
@@ -31,7 +35,6 @@
 .Footer-nav {
   display: flex;
   flex-flow: row nowrap;
-  width: 50%;
   justify-content: space-around;
 }
 
@@ -40,11 +43,13 @@
   width: auto;
 }
 
-@keyframes App-logo-spin {
+@keyframes grow-in {
   from {
-    transform: rotate(0deg);
+    transform: scale(.5);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: scale(1);
+    opacity: 1;
   }
 }

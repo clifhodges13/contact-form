@@ -1,19 +1,35 @@
 .Form-container {
   width: 100vw;
-  height: 70vh;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Form-container::before {
+  content: '';
+  width: 100vw;
+  height: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, .6);
 }
 
 .form {
   width: 60%;
-  height: 100%;
-  margin: 0 auto;
+  height: 70%;
   padding: 3% 0;
+  background: white;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
   border-radius: 10px;
   box-shadow: 0 1rem 1rem rgba(0,0,0,.3);
+  animation: grow-in .4s ease alternate;
 }
 
 .form > * {
@@ -83,4 +99,16 @@
 
 .form input[type="submit"]:focus {
   outline: none;
+}
+
+@keyframes grow-in {
+  from {
+    transform: scale(.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
