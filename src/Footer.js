@@ -4,23 +4,14 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <div className="App">
+    <div className="Footer">
       <footer className="App-footer">
         <img src={footerLogo} className="Logo" alt="Logo"/>
-        <ul className="Footer-nav">
-          <a href="#" className="App-link">
-            <li>Home</li>
-          </a>
-          <a href="#" className="App-link">
-            <li>About Us</li>
-          </a>
-          <a href="#" className="App-link">
-            <li>Contact</li>
-          </a>
-          <a href="#" className="App-link">
-            <li>Login / Signup</li>
-          </a>
-        </ul>
+        <div className="Footer-nav">
+          <button onClick="" className="Footer-link">
+            <p>Contact</p>
+          </button>
+        </div>
       </footer>
     </div>
   );
